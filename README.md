@@ -2,3 +2,4 @@
 My dot files
 
 - Install font awesome for slstatusbar
+- Install noto fonts for emoji support
