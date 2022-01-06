@@ -9,15 +9,16 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "SourceCodePro-Bold:size=11" };
 static const char dmenufont[]       = "SourceCodePro-Bold:size=11";
 static const char col_gray1[]       = "#201c1e"; 
-static const char col_gray2[]       = "#d83131"; //Only Change this colour
+static const char col_gray2[]       = "#333399"; //Only Change this colour
 static const char col_gray3[]       = "#cccccc"; //Text colour
 static const char col_gray4[]       = "#cccccc"; 
-static const char col_cyan[]        = "#d83131"; //Only Change this colour
-static const char *colors[][3]      = {
+static const char col_cyan[]        = "#333399"; //Only Change this colour
+#include "/home/letters/.cache/wal/colors-wal-dwm.h"
+//static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-};
+//	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+//	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+//};
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "", "" };
@@ -58,8 +59,9 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *dmenucmd[] = { "dmenu_run", NULL };
+//static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
